@@ -4,7 +4,6 @@ php_value upload_max_filesize 100M
 php_value post_max_size 220M
 php_value memory_limit 256M
 # End PHP Site Settings
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -15,7 +14,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
-
 ExpiresActive on
 ExpiresByType image/jpeg A604800
 ExpiresByType image/gif A604800
@@ -30,3 +28,6 @@ ExpiresByType font/ttf A604800
 ExpiresByType text/javascript A604800
 ExpiresByType text/xml A604800
 ExpiresByType application/x-javascript A604800
+<FilesMatch "\\.(js|css|html|htm|php|xml|eot|jpg|gif|png|jpeg)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
