@@ -16,3 +16,17 @@ RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
 
+ExpiresActive on
+ExpiresByType image/jpeg A604800
+ExpiresByType image/gif A604800
+ExpiresByType image/png A604800
+ExpiresByType application/x-shockwave-flash A604800
+ExpiresByType audio/mpeg A604800
+ExpiresByType text/x-javascript A604800
+ExpiresByType image/x-icon A604800
+ExpiresByType text/css A604800
+ExpiresByType font/eot A604800
+ExpiresByType font/ttf A604800
+ExpiresByType text/javascript A604800
+ExpiresByType text/xml A604800
+ExpiresByType application/x-javascript A604800
